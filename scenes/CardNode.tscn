@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cardnode"]
+
+[ext_resource type="Script" path="res://scripts/CardNode.gd" id="1_cardnode"]
+
+[node name="CardNode" type="Button"]
+custom_minimum_size = Vector2(66, 105)
+script = ExtResource("1_cardnode")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+position = Vector2(0, 0)
+size = Vector2(66, 105)
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="."]
+position = Vector2(0, 0)
+size = Vector2(66, 105)
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1

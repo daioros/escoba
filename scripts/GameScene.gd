@@ -1,0 +1,11 @@
+# GameScene.gd
+# Launcher: detects orientation and loads the correct layout scene.
+extends Node
+
+func _ready() -> void:
+	if GameSettings.orientation == 1:
+		get_tree().root.content_scale_size = Vector2i(540, 960)
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/GameScene_portrait.tscn")
+	else:
+		get_tree().root.content_scale_size = Vector2i(960, 540)
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/GameScene_landscape.tscn")

@@ -1,0 +1,181 @@
+[gd_scene load_steps=2 format=3 uid="uid://gamescene_portrait"]
+
+[ext_resource type="Script" path="res://scripts/GameScene_portrait.gd" id="1_gamescene_portrait"]
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gamescene_portrait")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.35, 0.08, 1)
+
+[node name="MainVBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="CompLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 32)
+theme_override_colors/font_color = Color(0.7, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "COMPUTADORA"
+horizontal_alignment = 1
+
+[node name="CompHandArea" type="HBoxContainer" parent="MainVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 120)
+theme_override_constants/separation = 6
+
+[node name="Divider1" type="ColorRect" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 3)
+color = Color(1, 1, 1, 0.25)
+
+[node name="TableLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 32)
+theme_override_colors/font_color = Color(1, 1, 0.6, 1)
+theme_override_font_sizes/font_size = 18
+text = "MESA"
+horizontal_alignment = 1
+
+[node name="TableArea" type="HBoxContainer" parent="MainVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 240)
+theme_override_constants/separation = 6
+
+[node name="Divider2" type="ColorRect" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 3)
+color = Color(1, 1, 1, 0.25)
+
+[node name="PlayerLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 32)
+theme_override_colors/font_color = Color(0.7, 1, 0.7, 1)
+theme_override_font_sizes/font_size = 18
+text = "TU MANO"
+horizontal_alignment = 1
+
+[node name="PlayerHandArea" type="HBoxContainer" parent="MainVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 120)
+theme_override_constants/separation = 6
+
+[node name="Divider3" type="ColorRect" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 3)
+color = Color(1, 1, 1, 0.25)
+
+[node name="StatusLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 30)
+theme_override_colors/font_color = Color(1, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 18
+text = "① Elige una carta de TU MANO"
+horizontal_alignment = 1
+
+[node name="InfoRow" type="HBoxContainer" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 24)
+theme_override_constants/separation = 0
+
+[node name="ScoreLabel" type="Label" parent="MainVBox/InfoRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "TÚ: 0   YO: 0   (hasta 21)"
+
+[node name="DeckLabel" type="Label" parent="MainVBox/InfoRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Quedan 32 cartas"
+horizontal_alignment = 1
+
+[node name="EscobasLabel" type="Label" parent="MainVBox/InfoRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 0.4, 1)
+theme_override_font_sizes/font_size = 14
+text = "Escobas TÚ: 0  YO: 0"
+horizontal_alignment = 2
+
+[node name="ErrorLabel" type="Label" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 24)
+theme_override_colors/font_color = Color(1, 0.3, 0.3, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="BottomBar" type="Control" parent="MainVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+size_flags_horizontal = 3
+
+[node name="ButtonRow" type="HBoxContainer" parent="MainVBox/BottomBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="ConfirmButton" type="Button" parent="MainVBox/BottomBar/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "✔  Confirmar jugada"
+
+[node name="PassButton" type="Button" parent="MainVBox/BottomBar/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(130, 0)
+theme_override_font_sizes/font_size = 18
+text = "↩  Limpiar"
+
+[node name="QuitButton" type="Button" parent="MainVBox/BottomBar/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 0)
+theme_override_colors/font_color = Color(1, 0.5, 0.5, 1)
+theme_override_font_sizes/font_size = 18
+text = "🚪 Volver"
+
+[node name="EndTurnHint" type="Label" parent="MainVBox/BottomBar"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "⏳ Turno de la Computadora..."
+horizontal_alignment = 1
+vertical_alignment = 1

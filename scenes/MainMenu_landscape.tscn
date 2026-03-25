@@ -1,0 +1,132 @@
+[gd_scene load_steps=2 format=3 uid="uid://mainmenu_landscape"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_mainmenu"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mainmenu")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.35, 0.08, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_top = 45.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 0.6, 1)
+theme_override_font_sizes/font_size = 63
+text = "TOUPA ESCOBA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 150.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBox"]
+custom_minimum_size = Vector2(450, 90)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "¡Jugar!"
+
+[node name="ConfigButton" type="Button" parent="CenterContainer/VBox"]
+custom_minimum_size = Vector2(450, 72)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "⚙  Configuración"
+
+[node name="CreditsButton" type="Button" parent="CenterContainer/VBox"]
+custom_minimum_size = Vector2(450, 72)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Créditos"
+
+[node name="ExitRow" type="HBoxContainer" parent="CenterContainer/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBox/ExitRow"]
+custom_minimum_size = Vector2(240, 72)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5, 0.5, 1)
+theme_override_font_sizes/font_size = 30
+text = "🚪 Salir"
+
+[node name="CreditsPanel" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.18, 0.04, 0.95)
+
+[node name="CreditsLabel" type="Label" parent="CreditsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -390.0
+offset_top = -195.0
+offset_right = 390.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 1, 0.9, 1)
+theme_override_font_sizes/font_size = 22
+text = "TOUPA ESCOBA v1.0
+Desarrollado por Rafaelo R.R. originalmente en QuickBasic (1997).
+
+Reglas: captura cartas de la mesa que sumen exactamente 15.
+Gana quien antes llegue al número de puntos acordado.
+Puntúan: más cartas, más oros, más sietes,
+el 7 de oros (velo) y cada escoba (dejar la mesa vacía)."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CloseButton" type="Button" parent="CreditsPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -90.0
+offset_right = 165.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "✖  Cerrar"

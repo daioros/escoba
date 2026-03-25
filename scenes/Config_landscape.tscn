@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://dui6xjuvgufkf"]
+
+[ext_resource type="Script" uid="uid://vrsijymsfx6d" path="res://scripts/Config.gd" id="1_config"]
+
+[node name="Config" type="Control" unique_id=230880705]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_config")
+
+[node name="Background" type="ColorRect" parent="." unique_id=239005845]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.35, 0.08, 1)
+
+[node name="Title" type="Label" parent="." unique_id=964101149]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 0.6, 1)
+theme_override_font_sizes/font_size = 38
+text = "⚙  Configuración"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=627345352]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 80.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer" unique_id=652485786]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TargetRow" type="HBoxContainer" parent="CenterContainer/VBox" unique_id=2113113350]
+custom_minimum_size = Vector2(860, 70)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LabelTarget" type="Label" parent="CenterContainer/VBox/TargetRow" unique_id=1540464552]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 22
+text = "¿Hasta cuántos puntos?"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TargetMinus" type="Button" parent="CenterContainer/VBox/TargetRow" unique_id=924801586]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "−"
+
+[node name="TargetLabel" type="Label" parent="CenterContainer/VBox/TargetRow" unique_id=1919904685]
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.4, 1)
+theme_override_font_sizes/font_size = 38
+text = "21"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TargetPlus" type="Button" parent="CenterContainer/VBox/TargetRow" unique_id=2098782774]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "+"
+
+[node name="DealerRow" type="HBoxContainer" parent="CenterContainer/VBox" unique_id=1658177160]
+custom_minimum_size = Vector2(860, 70)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LabelDealer" type="Label" parent="CenterContainer/VBox/DealerRow" unique_id=1330586875]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 22
+text = "¿Quién baraja primero?"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BtnDealer_Tu" type="Button" parent="CenterContainer/VBox/DealerRow" unique_id=734491892]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+toggle_mode = true
+button_pressed = true
+text = "🧑 Tú"
+
+[node name="BtnDealer_Yo" type="Button" parent="CenterContainer/VBox/DealerRow" unique_id=1802018904]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+toggle_mode = true
+text = "🤖 Computador"
+
+[node name="OrientationButton" type="Button" parent="CenterContainer/VBox" unique_id=1526305496]
+custom_minimum_size = Vector2(860, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "📱 Modo: Horizontal"
+
+[node name="SoundButton" type="Button" parent="CenterContainer/VBox" unique_id=1724005034]
+custom_minimum_size = Vector2(860, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+theme_override_font_sizes/font_size = 26
+text = "🔊 Sonido: ON"
+
+[node name="BackRow" type="HBoxContainer" parent="CenterContainer/VBox" unique_id=829098590]
+layout_mode = 2
+alignment = 1
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBox/BackRow" unique_id=850919495]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.4, 1)
+theme_override_font_sizes/font_size = 24
+text = "← Volver"
